@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>NuLog</title>
+  <link rel="stylesheet" href="style.css"/>
+    <link rel="icon" type="ico" href="favicon-32x32.png" />
+</head>
+<body>
+  <div class="background"></div>
+  <div class="dashboard">
+    <h1>🌟Productivity Dashboard</h1>
+    <div class="widgets">
+      <!-- To-Do & Planner -->
+      <div class="widget todo">
+        <h2>📝 To‑Do & Planner</h2>
+        <input id="todo-input" type="text" placeholder="Add a task..." />
+        <input id="todo-date" type="date" />
+        <ul id="todo-list"></ul>
+      </div>
+      <!-- Pomodoro -->
+      <div class="widget pomodoro">
+        <h2>🍅 Pomodoro Timer</h2>
+        <div id="timer">25:00</div>
+        <div class="buttons">
+          <button onclick="startTimer()">Start</button>
+          <button class="pause" onclick="pauseTimer()">Pause</button>
+          <button onclick="resetTimer()">Reset</button>
+        </div>
+      </div>
+      <!-- Weather -->
+      <div class="widget weather">
+        <h2>☁️ Weather</h2>
+        <div id="weather-info">Loading...</div>
+      </div>
+      <!-- Quote -->
+      <div class="widget quote">
+        <h2>💬 Quote of the Day</h2>
+        <blockquote id="quote">Fetching...</blockquote>
+        <cite id="author"></cite>
+      </div>
+    </div>
+  </div>
+  <audio id="alarm" src="ding.mp3" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>

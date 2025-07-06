@@ -1,0 +1,137 @@
+/* Reset & Fonts */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  height: 100%;
+  overflow-x: hidden;
+  color: #2c3e50;
+}
+
+/* Background */
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-45deg, #fbc2eb, #a6c1ee, #89f7fe, #66a6ff);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  z-index: -1;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Dashboard Container */
+.dashboard {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Heading */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: #1e3c72;
+}
+
+/* Widgets Grid */
+.widgets {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Widget Box */
+.widget {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* To-Do */
+.todo input {
+  width: 100%;
+  padding: 0.7rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+}
+
+.todo ul {
+  list-style: none;
+  padding: 0;
+}
+
+.todo li {
+  background: #ecf0f1;
+  padding: 0.5rem;
+  border-radius: 8px;
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo li.done {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* Pomodoro */
+#timer {
+  font-size: 2.8rem;
+  margin: 1rem 0;
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+.buttons button {
+  margin: 5px;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #3498db;
+  color: white;
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  background: #2980b9;
+}
+
+/* Weather */
+.weather #weather-info {
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 1rem;
+  background: #e0f7fa;
+  border-radius: 10px;
+}
+
+/* Quote */
+.quote blockquote {
+  font-style: italic;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.quote cite {
+  font-weight: bold;
+  display: block;
+  color: #555;
+}
+.todo input[type="date"] {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
